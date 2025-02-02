@@ -4,7 +4,7 @@ services:
   ollama:
     image: ollama/ollama
     container_name: ollama
-    restart: unless-stopped
+    restart: always
     ports:
       - "11434:11434"
     volumes:
@@ -16,6 +16,21 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: ngrok
+    restart: always
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml
+    env_file:
+      - .env
+    command:
+      "http --domain=$NGROK_DOMAIN ollama:11434"
+    environment:
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
+    ports:
+      - "4040:4040"
 
 volumes:
   ollama:
