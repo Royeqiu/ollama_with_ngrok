@@ -83,3 +83,8 @@ Docker Compose 已自動啟動 ngrok，並使用 `.env` 檔案中的 `NGROK_DOMA
 
 透過本指南，您已成功使用 Docker Compose 部署 Ollama，並使用 ngrok 提供了一個對外的網址，無需架設額外的 Proxy 伺服器。這使您能夠更方便地與外部世界分享和測試您的模型。
 
+## 📜 授權條款 (License)
+
+本專案採用 MIT 授權 (MIT License)，使用者可自由使用、修改及分發，但需保留原始授權聲明。  
+詳見 [LICENSE](LICENSE) 文件。
+
