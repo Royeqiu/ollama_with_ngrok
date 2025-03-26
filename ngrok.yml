@@ -1,0 +1,7 @@
+version: 2
+
+tunnels:
+  ollama:
+    proto: https
+    addr: ollama:11434
+    domain: ${NGROK_DOMAIN}
