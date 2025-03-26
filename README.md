@@ -29,6 +29,7 @@
    ```env
    NGROK_AUTHTOKEN=your-ngrok-authtoken
    NGROK_DOMAIN=your-ngrok-domain
+   MODELS_PATH=./models
    ```
    
    將 `your-ngrok-authtoken` 和 `your-ngrok-domain` 替換為您從 ngrok 儀表板獲取的值。

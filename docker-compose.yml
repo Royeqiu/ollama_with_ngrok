@@ -9,6 +9,9 @@ services:
       - "11434:11434"
     volumes:
       - ollama:/root/.ollama
+      - ${MODELS_PATH}:/root/models
+    env_file:
+      - .env
     deploy:
       resources:
         reservations:
