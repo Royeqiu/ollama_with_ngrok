@@ -12,13 +12,7 @@ services:
       - ${MODELS_PATH}:/root/models
     env_file:
       - .env
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
+
 
   ngrok:
     image: ngrok/ngrok:latest
